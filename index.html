@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nelson's Painting | Interior & Exterior Painting, Myrtle Beach SC</title>
+<meta name="description" content="Nelson's Painting: family-owned interior and exterior painting, remodeling and handyman services in Myrtle Beach and the Grand Strand. Call 240-676-5016 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Kaushan+Script&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2a5b; --navy-dark:#081f44; --orange:#f7a823; --orange-deep:#f08c00;
+  --ink:#1b1b1b; --muted:#4a5568; --light:#f3f6fb; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--ink);background:var(--white);line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+h1,h2,h3,.nav a,.btn,.eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3px}
+.script{font-family:'Kaushan Script',cursive;text-transform:none;color:var(--orange-deep)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--navy);font-weight:600;padding:12px 26px;border-radius:4px;font-size:1.05rem;border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--orange-deep)}
+.btn.navy{background:var(--navy);color:#fff;font-size:.9rem;padding:8px 18px}
+.btn.navy:hover{background:var(--navy-dark)}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 16px;max-width:1180px;margin:0 auto;flex-wrap:wrap}
+.logo{line-height:.9}
+.logo .s{font-family:'Kaushan Script',cursive;color:var(--navy);font-size:2.6rem}
+.logo .b{display:block;font-family:'Oswald';font-weight:700;color:var(--navy);font-size:2.2rem;border-bottom:5px solid var(--orange);width:max-content}
+.badges{display:flex;gap:28px}
+.badge{text-align:center;font-family:'Oswald';color:var(--navy);font-size:.85rem;font-weight:600;text-transform:uppercase}
+.badge .ic{width:46px;height:46px;border-radius:50%;background:var(--orange);display:grid;place-items:center;margin:0 auto 6px;font-size:1.4rem}
+.call{text-align:center}
+.call .ph{font-family:'Oswald';font-weight:700;font-size:2.1rem;color:var(--navy)}
+.call small{display:block;font-size:.72rem;color:var(--navy);font-weight:600;margin-top:6px;text-transform:uppercase}
+nav{background:var(--navy)}
+.nav{display:flex;justify-content:space-between;max-width:1180px;margin:0 auto;padding:0 16px;overflow-x:auto}
+.nav a{color:#fff;padding:14px 10px;font-size:.98rem;white-space:nowrap}
+.nav a:hover,.nav a.active{color:var(--orange)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 1.15fr;min-height:460px;background:var(--white)}
+.hero-text{padding:36px 28px 28px 40px}
+.hero h1{font-size:3rem;line-height:1.02;color:var(--navy)}
+.hero h1 .script{display:block;font-size:3.3rem;margin-top:4px}
+.hero p{margin:18px 0 22px;font-size:1.05rem;max-width:440px}
+.values{display:flex;gap:18px;margin-top:26px;flex-wrap:wrap}
+.values div{font-family:'Oswald';font-size:.75rem;color:var(--navy);text-transform:uppercase;text-align:center;width:90px}
+.values span{display:block;font-size:1.7rem;margin-bottom:4px}
+.hero-img{position:relative;background:#fff right center/cover no-repeat url('images/hero.jpg')}
+.hero-tag{position:absolute;right:0;top:12%;background:var(--navy);color:#fff;font-family:'Kaushan Script';font-size:2rem;line-height:1.15;padding:28px 30px;transform:rotate(-8deg);max-width:240px}
+
+/* Sections */
+section{padding:46px 0}
+.eyebrow{color:var(--orange-deep);font-size:1.35rem;font-weight:600}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:22px}
+.head h2{font-size:2.4rem;color:var(--navy);line-height:1}
+.head p{max-width:440px;color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card{position:relative;height:200px;background:#cfd8e6 center/cover no-repeat;border-radius:3px;overflow:hidden}
+.card h3{position:absolute;left:0;right:0;bottom:0;background:rgba(11,42,91,.92);color:#fff;padding:12px 14px;font-size:1.1rem;display:flex;align-items:center;gap:10px}
+.card h3 span{color:var(--orange);font-size:1.5rem}
+#work{background:var(--light)}
+.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.gallery div{position:relative;height:160px;background:#cfd8e6 center/cover no-repeat;border-radius:3px}
+.gallery b{position:absolute;left:0;bottom:0;background:var(--navy);color:#fff;font-family:'Oswald';padding:4px 14px;font-weight:500}
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.review{display:flex;gap:16px;border:1px solid #e2e8f0;padding:14px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.review .ph{flex:0 0 150px;background:#cfd8e6 center/cover no-repeat;border-radius:3px;min-height:150px}
+.stars{color:var(--orange);font-size:1.2rem;letter-spacing:2px}
+.review p{font-size:.88rem;margin:6px 0}
+.review cite{color:var(--navy);font-size:.82rem;font-style:normal}
+
+/* Estimate form */
+#contact{background:var(--navy);color:#fff}
+#contact .head h2{color:#fff}
+#contact .head p{color:#d6deeb}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#fff;color:var(--ink);padding:24px;border-radius:6px}
+form label{font-size:.85rem;font-weight:600;color:var(--navy);display:flex;flex-direction:column;gap:5px}
+form .full{grid-column:1/-1}
+input,select,textarea{font:inherit;padding:10px 12px;border:1px solid #cbd5e1;border-radius:4px;width:100%}
+textarea{min-height:110px;resize:vertical}
+.form-note{font-size:.85rem;margin-top:8px}
+.cta-phone{font-family:'Oswald';font-size:2rem;color:var(--orange);font-weight:700}
+
+footer{background:var(--navy-dark);color:#fff;padding:22px 0}
+.foot{background:#0b2a5b;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .logo .s,.foot .logo .b{color:#fff}
+.foot nav{background:none;display:flex;gap:22px;font-family:'Oswald';text-transform:uppercase;font-size:.9rem;flex-wrap:wrap}
+.foot small{font-size:.75rem;text-transform:uppercase;display:block}
+
+@media(max-width:900px){
+  .badges{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-img{min-height:300px}
+  .hero-text{padding:28px 16px}
+  .hero h1{font-size:2.3rem}.hero h1 .script{font-size:2.5rem}
+  .hero-tag{font-size:1.4rem;padding:16px 18px;max-width:170px}
+  .grid4{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .reviews,form{grid-template-columns:1fr}
+  .review{flex-direction:column}.review .ph{flex-basis:auto}
+  .head h2{font-size:1.9rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <a href="#home" class="logo" aria-label="Nelson's Painting home"><img src="images/logo.png" alt="Nelson's Painting" style="height:110px;width:auto"></a>
+    <div class="badges">
+      <div class="badge"><div class="ic">🖌️</div>Interior &amp; Exterior<br>Painting</div>
+      <div class="badge"><div class="ic">🏠</div>Remodeling<br>&amp; Handyman Services</div>
+    </div>
+    <div class="call">
+      <a class="ph" href="tel:+12406765016">📞 240-676-5016</a><br>
+      <a class="btn" href="#contact">Get a Free Estimate →</a>
+      <small>Quality work. Reliable service.<br>Your vision, our mission.</small>
+    </div>
+  </div>
+  <nav>
+    <div class="nav">
+      <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#services">Services</a>
+      <a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#contact">Color Help</a>
+      <a href="#contact">Area Serving</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="hero" id="home">
+    <div class="hero-text" id="about">
+      <h1>A Family Business That Brings <span class="script">Color to Your Life.</span></h1>
+      <p>Nelson's Painting provides professional interior and exterior painting and handyman services with quality workmanship and attention to detail. From a single room to a full home, we treat every project like it's our own.</p>
+      <a class="btn" href="#contact">Get a Free Estimate →</a>
+      <div class="values">
+        <div><span>🛡️</span>Quality Workmanship</div>
+        <div><span>🤝</span>Reliable Service</div>
+        <div><span>⭐</span>Attention to Detail</div>
+        <div><span>🏡</span>Your Vision, Our Mission</div>
+      </div>
+    </div>
+    <div class="hero-img" role="img" aria-label="Kids picking paint colors — Same great work, now with a family touch"></div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="eyebrow">Our Services</div><h2>Quality Painting &amp; More</h2></div>
+        <div><p>Interior and exterior painting, remodeling, and handyman services to keep your home or business looking its best. Clean work, reliable service, and beautiful results.</p></div>
+      </div>
+      <div class="grid4">
+        <div class="card" style="background-image:url('images/interior.jpg')"><h3><span>🖌️</span>Interior Painting</h3></div>
+        <div class="card" style="background-image:url('images/exterior.jpg')"><h3><span>🏠</span>Exterior Painting</h3></div>
+        <div class="card" style="background-image:url('images/trim.jpg')"><h3><span>🎨</span>Trim, Doors &amp; Accent Walls</h3></div>
+        <div class="card" style="background-image:url('images/handyman.jpg')"><h3><span>🔧</span>Remodeling &amp; Handyman</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="eyebrow">Our Work</div><h2>Real Projects. Real Results.</h2></div>
+        <p>Take a look at some of the homes and spaces we've had the pleasure of working on.</p>
+      </div>
+      <div class="gallery">
+        <div style="background-image:url('images/before.jpg')"><b>Before</b></div>
+        <div style="background-image:url('images/after.jpg')"><b>After</b></div>
+        <div style="background-image:url('images/work1.jpg')"></div>
+        <div style="background-image:url('images/work2.jpg')"></div>
+        <div style="background-image:url('images/work3.jpg')"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="head"><div><div class="eyebrow">What Our Clients Say</div><h2>Real Feedback from Real Customers <span class="stars">★★★★★</span></h2></div></div>
+      <div class="reviews">
+        <div class="review">
+          <div class="ph" style="background-image:url('images/review1.jpg')"></div>
+          <div><div class="stars">★★★★★</div>
+            <p>"Nelson first painted my office and did a professional job! He paid attention to detail and left the office better than he found it. He also was able to paint a rental property of mine on short notice. Again his painting was excellent and he left the house cleaner than it was before he started. I would highly recommend hiring Nelson to your company. He most certainly will be an asset and his craftsmanship will not disappoint you."</p>
+            <cite>— Satisfied Homeowner</cite></div>
+        </div>
+        <div class="review">
+          <div class="ph" style="background-image:url('images/review2.jpg')"></div>
+          <div><div class="stars">★★★★★</div>
+            <p>"Nelson did a phenomenal job painting our entire house. 2 major hallways, 4 bedrooms, kitchen, bathroom, and more. He was very professional and worked efficiently even when there were other things going on in the house that probably should've impeded him. He is precise and responsive and we would use him again in a heartbeat."</p>
+            <cite>— Homeowner</cite></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="eyebrow">Ready for a Fresh Look?</div><h2>Get Your Free Estimate</h2>
+          <p>Let's bring your vision to life. Fill out the form or call today for a free, no-obligation estimate.</p></div>
+        <div><a class="cta-phone" href="tel:+12406765016">📞 240-676-5016</a><p>Serving Myrtle Beach &amp; the Grand Strand area</p></div>
+      </div>
+            <form id="estimate" action="https://formsubmit.co/ajax/nelson.santos.painting@gmail.com" method="POST">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+        <label>Project type
+          <select name="project">
+            <option>Interior Painting</option><option>Exterior Painting</option>
+            <option>Trim, Doors &amp; Accent Walls</option><option>Remodeling / Handyman</option><option>Color Help</option><option>Other</option>
+          </select></label>
+        <label class="full">Property address or area<input name="address" autocomplete="street-address"></label>
+        <label class="full">Tell us about the project<textarea name="message"></textarea></label>
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="New estimate request — Nelson's Painting website">
+        <div class="full"><button class="btn" type="submit">Request My Free Estimate →</button>
+          <p class="form-note" id="form-status" role="status"></p></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#home" class="logo"><img src="images/logo-white.png" alt="Nelson's Painting" style="height:70px;width:auto"></a>
+    <nav><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+    <div><b>Follow our family business</b><small>Quality work. Reliable service.<br>Your vision, our mission.</small></div>
+  </div>
+</footer>
+
+<script>
+// Submit the estimate form without leaving the page
+document.getElementById('estimate').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, status = document.getElementById('form-status');
+  status.textContent = 'Sending…';
+  try {
+    const r = await fetch(f.action, {method:'POST', body:new FormData(f), headers:{Accept:'application/json'}});
+    if (r.ok) { f.reset(); status.textContent = "Thanks! We got your request and will reach out soon."; }
+    else status.textContent = 'Something went wrong — please call 240-676-5016.';
+  } catch { status.textContent = 'Something went wrong — please call 240-676-5016.'; }
+});
+</script>
+</body>
+</html>
