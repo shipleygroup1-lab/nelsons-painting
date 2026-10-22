@@ -108,7 +108,7 @@
           <p>Let's bring your vision to life. Fill out the form or call today for a free, no-obligation estimate.</p></div>
         <div><a class="cta-phone" href="tel:+12406765016">📞 240-676-5016</a><p id="area">Serving Myrtle Beach &amp; the Grand Strand area</p></div>
       </div>
-            <form id="estimate" action="https://formsubmit.co/ajax/nelson.santos.painting@gmail.com" method="POST">
+            <form id="estimate" action="https://formsubmit.co/nelson.santos.painting@gmail.com" method="POST">
         <label>Name<input name="name" required autocomplete="name"></label>
         <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
         <label>Email<input name="email" type="email" autocomplete="email"></label>
@@ -120,6 +120,7 @@
         <label class="full">Property address or area<input name="address" autocomplete="street-address"></label>
         <label class="full">Tell us about the project<textarea name="message"></textarea></label>
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://nelsonspaintingmb.com/thanks.html">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <input type="hidden" name="_subject" value="New estimate request — Nelson's Painting website">
@@ -138,18 +139,5 @@
   </div>
 </footer>
 
-<script>
-// Submit the estimate form without leaving the page
-document.getElementById('estimate').addEventListener('submit', async e => {
-  e.preventDefault();
-  const f = e.target, status = document.getElementById('form-status');
-  status.textContent = 'Sending…';
-  try {
-    const r = await fetch(f.action, {method:'POST', body:new FormData(f), headers:{Accept:'application/json'}});
-    if (r.ok) { f.reset(); status.textContent = "Thanks! We got your request and will reach out soon."; }
-    else status.textContent = 'Something went wrong — please call 240-676-5016.';
-  } catch { status.textContent = 'Something went wrong — please call 240-676-5016.'; }
-});
-</script>
 </body>
 </html>
