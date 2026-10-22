@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Now | Nelson's Painting, Myrtle Beach SC</title>
+<meta name="description" content="Book a free painting estimate with Nelson's Painting in Myrtle Beach and the Grand Strand. Send your project details or call 240-676-5016.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Kaushan+Script&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <a href="index.html" class="logo" aria-label="Nelson's Painting home"><img src="images/logo.png" alt="Nelson's Painting" style="height:90px;width:auto"></a>
+    <div class="call">
+      <a class="ph" href="tel:+12406765016">📞 240-676-5016</a>
+      <small>Quality work. Reliable service.<br>Your vision, our mission.</small>
+    </div>
+  </div>
+  <nav>
+    <div class="nav">
+      <a href="index.html">Home</a><a href="index.html#services">Services</a><a href="index.html#work">Our Work</a>
+      <a href="index.html#reviews">Reviews</a><a href="index.html#area">Area Serving</a><a href="book.html" class="active">Book Now</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="book-hero">
+    <div class="wrap">
+      <div class="eyebrow">Book Now</div>
+      <h1>Book Your Free Estimate</h1>
+      <p>Tell us about your project and Nelson will reach out to set up a time that works for you. No cost, no obligation.</p>
+      <div class="book-steps">
+        <div><b>1. Send your details</b>Fill out the form below. It takes about a minute.</div>
+        <div><b>2. We'll reach out</b>Nelson calls or texts you to schedule a visit.</div>
+        <div><b>3. Get your estimate</b>A clear, honest price for your project.</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="book-form">
+    <div class="wrap">
+      <form id="estimate" action="https://formsubmit.co/ajax/nelson.santos.painting@gmail.com" method="POST">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+        <label>Project type
+          <select name="project" id="project">
+            <option>Interior Painting</option><option>Exterior Painting</option>
+            <option>Trim, Doors &amp; Accent Walls</option><option>Remodeling / Handyman</option><option>Color Help</option><option>Other</option>
+          </select></label>
+        <label class="full">Property address or area<input name="address" autocomplete="street-address"></label>
+        <label class="full">Tell us about the project<textarea name="message"></textarea></label>
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="New booking request — Nelson's Painting website">
+        <div class="full"><button class="btn" type="submit">Book My Free Estimate →</button>
+          <p class="form-note" id="form-status" role="status"></p></div>
+      </form>
+      <p style="margin-top:16px;color:var(--muted)">Prefer to talk? Call <a href="tel:+12406765016" style="color:var(--navy);font-weight:600">240-676-5016</a>. Serving Myrtle Beach &amp; the Grand Strand area.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="index.html" class="logo"><img src="images/logo-white.png" alt="Nelson's Painting" style="height:70px;width:auto"></a>
+    <nav><a href="index.html">Home</a><a href="index.html#services">Services</a><a href="index.html#work">Our Work</a><a href="index.html#reviews">Reviews</a><a href="book.html">Book Now</a></nav>
+    <div><b>Follow our family business</b><small>Quality work. Reliable service.<br>Your vision, our mission.</small></div>
+  </div>
+</footer>
+
+<script>
+// Preselect project type from the link (e.g. book.html?project=Color%20Help)
+const want = new URLSearchParams(location.search).get('project');
+if (want) { const sel = document.getElementById('project'); [...sel.options].forEach(o => { if (o.text === want) sel.value = o.text; }); }
+
+// Submit without leaving the page
+document.getElementById('estimate').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, status = document.getElementById('form-status');
+  status.textContent = 'Sending…';
+  try {
+    const r = await fetch(f.action, {method:'POST', body:new FormData(f), headers:{Accept:'application/json'}});
+    if (r.ok) { f.reset(); status.textContent = "Thanks! We got your request and Nelson will reach out soon to set up a time."; }
+    else status.textContent = 'Something went wrong — please call 240-676-5016.';
+  } catch { status.textContent = 'Something went wrong — please call 240-676-5016.'; }
+});
+</script>
+</body>
+</html>
