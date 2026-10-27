@@ -9,6 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Kaushan+Script&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>
+  // Turn on scroll animations only if supported and the visitor allows motion.
+  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("reveal-on");
+    setTimeout(function () { if (!window.__revealReady) document.documentElement.classList.remove("reveal-on"); }, 3000);
+  }
+</script>
+<script src="reveal.js" defer></script>
 </head>
 <body>
 
@@ -31,20 +39,20 @@
 <main>
   <div class="book-hero">
     <div class="wrap">
-      <div class="eyebrow">Book Now</div>
-      <h1>Book Your Free Estimate</h1>
-      <p>Tell us about your project and Nelson will reach out to set up a time that works for you. No cost, no obligation.</p>
+      <div class="eyebrow" data-reveal>Book Now</div>
+      <h1 data-reveal>Book Your Free Estimate</h1>
+      <p data-reveal>Tell us about your project and Nelson will reach out to set up a time that works for you. No cost, no obligation.</p>
       <div class="book-steps">
-        <div><b>1. Send your details</b>Fill out the form below. It takes about a minute.</div>
-        <div><b>2. We'll reach out</b>Nelson calls or texts you to schedule a visit.</div>
-        <div><b>3. Get your estimate</b>A clear, honest price for your project.</div>
+        <div data-reveal><b>1. Send your details</b>Fill out the form below. It takes about a minute.</div>
+        <div data-reveal><b>2. We'll reach out</b>Nelson calls or texts you to schedule a visit.</div>
+        <div data-reveal><b>3. Get your estimate</b>A clear, honest price for your project.</div>
       </div>
     </div>
   </div>
 
   <section id="book-form">
     <div class="wrap">
-      <form id="estimate" action="https://formsubmit.co/nelson.santos.painting@gmail.com" method="POST">
+      <form id="estimate" data-reveal action="https://formsubmit.co/nelson.santos.painting@gmail.com" method="POST">
         <label>Name<input name="name" required autocomplete="name"></label>
         <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
         <label>Email<input name="email" type="email" autocomplete="email"></label>

@@ -9,6 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Kaushan+Script&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>
+  // Turn on scroll animations only if supported and the visitor allows motion.
+  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("reveal-on");
+    setTimeout(function () { if (!window.__revealReady) document.documentElement.classList.remove("reveal-on"); }, 3000);
+  }
+</script>
+<script src="reveal.js" defer></script>
 </head>
 <body>
 
@@ -37,30 +45,30 @@
 <main>
   <div class="hero" id="home">
     <div class="hero-text" id="about">
-      <h1>A Family Business That Brings <span class="script">Color to Your Life.</span></h1>
-      <p>Nelson's Painting provides professional interior and exterior painting and handyman services with quality workmanship and attention to detail. From a single room to a full home, we treat every project like it's our own.</p>
-      <a class="btn" href="#contact">Get a Free Estimate →</a>
-      <div class="values">
+      <h1 data-reveal>A Family Business That Brings <span class="script">Color to Your Life.</span></h1>
+      <p data-reveal>Nelson's Painting provides professional interior and exterior painting and handyman services with quality workmanship and attention to detail. From a single room to a full home, we treat every project like it's our own.</p>
+      <a class="btn" data-reveal href="#contact">Get a Free Estimate →</a>
+      <div class="values" data-reveal>
         <div><span>🛡️</span>Quality Workmanship</div>
         <div><span>🤝</span>Reliable Service</div>
         <div><span>⭐</span>Attention to Detail</div>
         <div><span>🏡</span>Your Vision, Our Mission</div>
       </div>
     </div>
-    <div class="hero-img" role="img" aria-label="Kids picking paint colors — Same great work, now with a family touch"></div>
+    <div class="hero-img" data-reveal="right" role="img" aria-label="Kids picking paint colors — Same great work, now with a family touch"></div>
   </div>
 
   <section id="services">
     <div class="wrap">
       <div class="head">
-        <div><div class="eyebrow">Our Services</div><h2>Quality Painting &amp; More</h2></div>
-        <div><p>Interior and exterior painting, remodeling, and handyman services to keep your home or business looking its best. Clean work, reliable service, and beautiful results.</p></div>
+        <div data-reveal="left"><div class="eyebrow">Our Services</div><h2>Quality Painting &amp; More</h2></div>
+        <div data-reveal="right"><p>Interior and exterior painting, remodeling, and handyman services to keep your home or business looking its best. Clean work, reliable service, and beautiful results.</p></div>
       </div>
       <div class="grid4">
-        <div class="card" style="background-image:url('images/interior.jpg')"><h3><span>🖌️</span>Interior Painting</h3></div>
-        <div class="card" style="background-image:url('images/exterior.jpg')"><h3><span>🏠</span>Exterior Painting</h3></div>
-        <div class="card" style="background-image:url('images/trim.jpg')"><h3><span>🎨</span>Trim, Doors &amp; Accent Walls</h3></div>
-        <div class="card" style="background-image:url('images/handyman.jpg')"><h3><span>🔧</span>Remodeling &amp; Handyman</h3></div>
+        <div class="card" data-reveal style="background-image:url('images/interior.jpg')"><h3><span>🖌️</span>Interior Painting</h3></div>
+        <div class="card" data-reveal style="background-image:url('images/exterior.jpg')"><h3><span>🏠</span>Exterior Painting</h3></div>
+        <div class="card" data-reveal style="background-image:url('images/trim.jpg')"><h3><span>🎨</span>Trim, Doors &amp; Accent Walls</h3></div>
+        <div class="card" data-reveal style="background-image:url('images/handyman.jpg')"><h3><span>🔧</span>Remodeling &amp; Handyman</h3></div>
       </div>
     </div>
   </section>
@@ -68,30 +76,30 @@
   <section id="work">
     <div class="wrap">
       <div class="head">
-        <div><div class="eyebrow">Our Work</div><h2>Real Projects. Real Results.</h2></div>
-        <p>Take a look at some of the homes and spaces we've had the pleasure of working on.</p>
+        <div data-reveal="left"><div class="eyebrow">Our Work</div><h2>Real Projects. Real Results.</h2></div>
+        <p data-reveal="right">Take a look at some of the homes and spaces we've had the pleasure of working on.</p>
       </div>
       <div class="gallery">
-        <div style="background-image:url('images/before.jpg')"><b>Before</b></div>
-        <div style="background-image:url('images/after.jpg')"><b>After</b></div>
-        <div style="background-image:url('images/work1.jpg')"></div>
-        <div style="background-image:url('images/work2.jpg')"></div>
-        <div style="background-image:url('images/work3.jpg')"></div>
+        <div data-reveal="zoom" style="background-image:url('images/before.jpg')"><b>Before</b></div>
+        <div data-reveal="zoom" style="background-image:url('images/after.jpg')"><b>After</b></div>
+        <div data-reveal="zoom" style="background-image:url('images/work1.jpg')"></div>
+        <div data-reveal="zoom" style="background-image:url('images/work2.jpg')"></div>
+        <div data-reveal="zoom" style="background-image:url('images/work3.jpg')"></div>
       </div>
     </div>
   </section>
 
   <section id="reviews">
     <div class="wrap">
-      <div class="head"><div><div class="eyebrow">What Our Clients Say</div><h2>Real Feedback from Real Customers <span class="stars">★★★★★</span></h2></div></div>
+      <div class="head"><div data-reveal><div class="eyebrow">What Our Clients Say</div><h2>Real Feedback from Real Customers <span class="stars">★★★★★</span></h2></div></div>
       <div class="reviews">
-        <div class="review">
+        <div class="review" data-reveal>
           <div class="ph" style="background-image:url('images/review1.jpg')"></div>
           <div><div class="stars">★★★★★</div>
             <p>"Nelson first painted my office and did a professional job! He paid attention to detail and left the office better than he found it. He also was able to paint a rental property of mine on short notice. Again his painting was excellent and he left the house cleaner than it was before he started. I would highly recommend hiring Nelson to your company. He most certainly will be an asset and his craftsmanship will not disappoint you."</p>
             <cite>— Satisfied Homeowner</cite></div>
         </div>
-        <div class="review">
+        <div class="review" data-reveal>
           <div class="ph" style="background-image:url('images/review2.jpg')"></div>
           <div><div class="stars">★★★★★</div>
             <p>"Nelson did a phenomenal job painting our entire house. 2 major hallways, 4 bedrooms, kitchen, bathroom, and more. He was very professional and worked efficiently even when there were other things going on in the house that probably should've impeded him. He is precise and responsive and we would use him again in a heartbeat."</p>
@@ -104,11 +112,11 @@
   <section id="contact">
     <div class="wrap">
       <div class="head">
-        <div><div class="eyebrow">Ready for a Fresh Look?</div><h2>Get Your Free Estimate</h2>
+        <div data-reveal="left"><div class="eyebrow">Ready for a Fresh Look?</div><h2>Get Your Free Estimate</h2>
           <p>Let's bring your vision to life. Fill out the form or call today for a free, no-obligation estimate.</p></div>
-        <div><a class="cta-phone" href="tel:+12406765016">📞 240-676-5016</a><p id="area">Serving Myrtle Beach &amp; the Grand Strand area</p></div>
+        <div data-reveal="right"><a class="cta-phone" href="tel:+12406765016">📞 240-676-5016</a><p id="area">Serving Myrtle Beach &amp; the Grand Strand area</p></div>
       </div>
-            <form id="estimate" action="https://formsubmit.co/nelson.santos.painting@gmail.com" method="POST">
+            <form id="estimate" data-reveal action="https://formsubmit.co/nelson.santos.painting@gmail.com" method="POST">
         <label>Name<input name="name" required autocomplete="name"></label>
         <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
         <label>Email<input name="email" type="email" autocomplete="email"></label>
